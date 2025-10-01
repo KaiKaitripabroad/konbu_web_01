@@ -1,0 +1,114 @@
+/* 全体背景とフォント */
+body {
+  background-color: #0a0a0a;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ===== ヒーローセクション ===== */
+.hero {
+  position: relative;
+  height: 100vh; /* ✅ 画面高さぴったりに変更 */
+  background: url("Gemini_Generated_Image_3tw3ww3tw3ww3tw3.png") no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1; /* ✅ 重なり順を明確にする */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ 動画が崩れないように */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* ===== 特徴セクション ===== */
+.features {
+  position: relative;
+  z-index: 3; /* ✅ ヒーローより上に */
+  background: #000;
+  padding: 100px 0; /* ✅ 上下余白を増やして確実に表示 */
+  text-align: center;
+}
+
+.features .feature-box {
+  padding: 20px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.features .feature-box:hover {
+  transform: translateY(-5px);
+  color: #00e0ff;
+}
+
+.features i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* ===== 最新作品 ===== */
+.latest-works {
+  background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+  padding: 100px 0;
+}
+
+.latest-works h2 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.work-card {
+  text-align: center;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.work-card:hover {
+  transform: scale(1.05);
+  background: #202020;
+}
+
+.work-card img {
+  border-radius: 6px;
+  width: 100%;
+  height: auto;
+}
