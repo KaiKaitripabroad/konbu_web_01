@@ -1,17 +1,22 @@
 /* 全体背景とフォント */
 body {
-  background-color: #0a0a0a;
-  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #0e0e0e, #1a1a1a);
+  color: #e0e0e0;
+  font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+header.navbar {
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px); /* ✅ ガラス感UP */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ===== ヒーローセクション ===== */
 .hero {
   position: relative;
   height: 100vh; /* ✅ 画面高さぴったりに変更 */
-  background: url("Gemini_Generated_Image_3tw3ww3tw3ww3tw3.png") no-repeat center center/cover;
   overflow: hidden;
 }
 
@@ -46,13 +51,14 @@ video {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #b0b0b0;
 }
 
 /* ===== 特徴セクション ===== */
@@ -60,19 +66,23 @@ video {
   position: relative;
   z-index: 3; /* ✅ ヒーローより上に */
   background: #000;
-  padding: 100px 0; /* ✅ 上下余白を増やして確実に表示 */
+  padding: 100px; /* ✅ 上下余白を増やして確実に表示 */
   text-align: center;
 }
 
 .features .feature-box {
-  padding: 20px;
+  padding: 50px;
   transition: 0.3s;
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
 .features .feature-box:hover {
-  transform: translateY(-5px);
-  color: #00e0ff;
+  transform: translateY(-6px);
+  background: rgba(40, 40, 40, 0.9);
 }
 
 .features i {
@@ -95,8 +105,11 @@ video {
 
 .work-card {
   text-align: center;
-  background: #1a1a1a;
+  background: linear-gradient(145deg, #1e1e1e, #292929);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   padding: 15px;
+  height: 100%;
   border-radius: 8px;
   transition: 0.3s;
   color: #fff;
@@ -110,5 +123,6 @@ video {
 .work-card img {
   border-radius: 6px;
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
 }
